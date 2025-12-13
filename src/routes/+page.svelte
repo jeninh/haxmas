@@ -9,6 +9,10 @@
         alert("Coming very soon!");
     }
 
+    function goToDays() {
+        window.location.href = "/submit";
+    }
+
     function faq(){
       window.location.href = "/faq"
     }
@@ -19,7 +23,7 @@
 <XmasTree />
 
 <div class="button-container">
-    <Button on:click={comingSoon}>Submit</Button>
+    <Button on:click={goToDays}>Submit</Button>
     <Button on:click={comingSoon}>Shop</Button>
     <Button on:click="{faq}">FAQ</Button>
     <Button href="/auth/logout">Log Out</Button>
