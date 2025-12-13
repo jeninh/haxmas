@@ -1,7 +1,7 @@
 import { redirect } from '@sveltejs/kit';
 import type { LayoutServerLoad } from './$types';
 
-const publicRoutes = ['/faq', '/landing', '/auth/login', '/auth/callback'];
+const publicRoutes = ['/faq', '/landing', '/auth/login', '/auth/callback', '/credits', '/day'];
 
 export const load: LayoutServerLoad = async ({ locals, url }) => {
 	const isPublicRoute = publicRoutes.some((route) => url.pathname.startsWith(route));

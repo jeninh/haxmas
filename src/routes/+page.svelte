@@ -108,6 +108,9 @@
 	function faq() {
 		window.location.href = '/faq';
 	}
+	function credits() {
+		window.location.href = '/credits';
+	}
 </script>
 
 <ChristmasAnimationNoPresents />
@@ -130,6 +133,7 @@
 		<Button on:click={goToDays}>Submit</Button>
 		<Button on:click={comingSoon}>Shop</Button>
 		<Button on:click={faq}>FAQ</Button>
+		<Button on:click={credits}>Credits</Button>
 		<Button href="/auth/logout">Log Out</Button>
 	</div>
 </div>
