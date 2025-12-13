@@ -2,20 +2,23 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import LoginButton from '$lib/LoginButton.svelte';
 	import ChristmasAnimation from '$lib/ChristmasAnimation.svelte';
-	import XmasTree from '$lib/XmasTree.svelte';
-	import { page } from '$app/stores';
+	// import XmasTree from '$lib/XmasTree.svelte';
+	import { page } from '$app/state';
 
 	let { children, data } = $props();
 
 	const publicRoutes = ['/faq'];
-	let isPublicRoute = $derived(publicRoutes.includes($page.url.pathname));
+	let isPublicRoute = $derived(publicRoutes.includes(page.url.pathname));
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet"
+	/>
 </svelte:head>
 
 {#if data.user || isPublicRoute}
@@ -27,7 +30,7 @@
 		</div>
 		<section class="hero-section">
 			<ChristmasAnimation />
-			
+
 			<div class="hero-content">
 				<img src="/haxmas-logo.png" alt="Haxmas" class="hero-logo" />
 			</div>
@@ -40,10 +43,17 @@
 		<section class="faq-section">
 			<div class="faq-container">
 				<h2 class="faq-title">FAQ</h2>
-				
+
 				<div class="faq-item">
 					<h3>How does this work?</h3>
-					<p>Welcome to Haxmas; 12 days of hands-on hacking! From December 13-25, a new workshop drops each day, created by a different member of the Hack Club community. Each workshop is only available on its specific day (day 1's workshop on December 13, day 2's workshop on December 14, and so on), so make sure to participate daily! Each workshop comes with its own special prize, and you'll earn snowflakes that you can redeem for stickers, swag, and more!</p>
+					<p>
+						Welcome to Haxmas; 12 days of hands-on hacking! From December 13-25, a new workshop
+						drops each day, created by a different member of the Hack Club community. Each workshop
+						is only available on its specific day (day 1's workshop on December 13, day 2's workshop
+						on December 14, and so on), so make sure to participate daily! Each workshop comes with
+						its own special prize, and you'll earn snowflakes that you can redeem for stickers,
+						swag, and more!
+					</p>
 					<p>The more days you participate, the better the rewards:</p>
 					<ul>
 						<li><strong>Complete 3 days:</strong> Custom Haxmas sticker</li>
@@ -55,12 +65,18 @@
 
 				<div class="faq-item">
 					<h3>What skill level do I need to participate?</h3>
-					<p>No prior experience needed! Each tutorial guides you step-by-step from start to finish, so you can jump right in.</p>
+					<p>
+						No prior experience needed! Each tutorial guides you step-by-step from start to finish,
+						so you can jump right in.
+					</p>
 				</div>
 
 				<div class="faq-item">
 					<h3>What happens if I miss a day?</h3>
-					<p>You won't be able to claim that day's prize. Each workshop is only available on its specific day, so try to participate daily to maximize your rewards!</p>
+					<p>
+						You won't be able to claim that day's prize. Each workshop is only available on its
+						specific day, so try to participate daily to maximize your rewards!
+					</p>
 				</div>
 
 				<div class="faq-item">
@@ -80,12 +96,15 @@
 
 				<div class="faq-item">
 					<h3>Is Haxmas free?</h3>
-					<p>Yes! Haxmas is a Hack Club program and completely free to participate. Find out more at <a href="https://hackclub.com">hackclub.com</a>.</p>
+					<p>
+						Yes! Haxmas is a Hack Club program and completely free to participate. Find out more at <a
+							href="https://hackclub.com">hackclub.com</a
+						>.
+					</p>
 				</div>
 			</div>
 		</section>
-		</div>
-
+	</div>
 {/if}
 
 <style>
@@ -166,14 +185,12 @@
 		margin-top: 1rem;
 	}
 
-
-
 	.info-box p {
 		color: #fff;
 		font-size: 1.25rem;
 		line-height: 1.6;
 		margin: 0 0 0.75rem 0;
-		font-weight:500;
+		font-weight: 500;
 	}
 
 	.info-box p:last-child {
@@ -187,7 +204,7 @@
 		margin-bottom: 1rem;
 	}
 
-	.hero-title {
+	/* .hero-title {
 		font-size: 5rem;
 		color: #fff;
 		font-weight: 700;
@@ -195,7 +212,6 @@
 		text-transform: uppercase;
 		-webkit-text-stroke: 2px #900f10;
 	}
-
 
 	.hero-dates {
 		font-size: 1.2rem;
@@ -226,8 +242,13 @@
 	}
 
 	@keyframes scrollBounce {
-		0%, 100% { transform: translateY(0); }
-		50% { transform: translateY(5px); }
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(5px);
+		}
 	}
 
 	.info-section {
@@ -321,8 +342,6 @@
 			font-size: 3rem;
 		}
 
-
-
 		.hero-tree {
 			width: 80px;
 			height: 140px;
@@ -339,11 +358,12 @@
 		.cta-title {
 			font-size: 1.5rem;
 		}
-	}
+	} */
 
 	:global(.rainbow-glow-row) {
 		position: relative;
-		background: linear-gradient(90deg, 
+		background: linear-gradient(
+			90deg,
 			rgba(255, 0, 0, 0.15),
 			rgba(255, 154, 0, 0.15),
 			rgba(208, 222, 33, 0.15),
