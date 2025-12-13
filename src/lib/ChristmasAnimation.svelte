@@ -1,12 +1,13 @@
-<script>
+<script lang="ts">
     import { onMount } from "svelte";
     import gsap from "gsap";
 
-    function handlePresentClick(event) {
+    function handlePresentClick(event: MouseEvent) {
         const present = event.currentTarget;
         gsap.timeline()
             .to(present, { y: -30, duration: 0.15, ease: "power2.out" })
             .to(present, { y: 0, duration: 0.3, ease: "bounce.out" });
+        alert("Coming soon!");
     }
 
     onMount(() => {
@@ -867,13 +868,15 @@
 
         <!-- Presents on snow -->
         <g id="presents" transform="translate(0, -80)">
-            <!-- svelte-ignore a11y_click_events_have_key_events -->
-            <!-- svelte-ignore a11y_no_static_element_interactions -->
-            <g class="present" onclick={handlePresentClick}>
-                <rect x="150" y="900" width="80" height="60" fill="hsla(-150, 45%, 45%, 1)" />
-                <rect x="150" y="927" width="80" height="6" fill="hsla(30, 45%, 70%, 0.75)" />
-                <rect x="187" y="900" width="6" height="60" fill="hsla(30, 45%, 70%, 0.75)" />
-            </g>
+            <!-- Present 1 - Day 1 -->
+            <a href="/day1" class="present-link">
+                <g class="present">
+                    <text x="190" y="885" text-anchor="middle" fill="#4285f4" font-size="24" font-weight="bold">Day 1</text>
+                    <rect x="150" y="900" width="80" height="60" fill="hsla(-150, 45%, 45%, 1)" />
+                    <rect x="150" y="927" width="80" height="6" fill="hsla(30, 45%, 70%, 0.75)" />
+                    <rect x="187" y="900" width="6" height="60" fill="hsla(30, 45%, 70%, 0.75)" />
+                </g>
+            </a>
             
             <!-- svelte-ignore a11y_click_events_have_key_events -->
             <!-- svelte-ignore a11y_no_static_element_interactions -->

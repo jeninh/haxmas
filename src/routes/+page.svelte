@@ -3,7 +3,6 @@
     import Button from "$lib/Button.svelte";
     import ChristmasCountdown from "$lib/ChristmasCountdown.svelte";
     import XmasTree from "$lib/XmasTree.svelte";
-    import Presents from "$lib/Presents.svelte";
   import { redirect } from "@sveltejs/kit";
 
     function comingSoon() {
@@ -18,7 +17,6 @@
 <ChristmasCountdown />
 <ChristmasAnimation />
 <XmasTree />
-<Presents />
 
 <div class="button-container">
     <Button on:click={comingSoon}>Submit</Button>
