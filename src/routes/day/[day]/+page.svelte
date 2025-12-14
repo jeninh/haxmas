@@ -39,7 +39,7 @@
 			htmlContent = '<h1>Invalid day.</h1><p>Please select a day between 1 and 12.</p>';
 			return;
 		}
-		if (day > CURRENT_DAY) {
+		if (day > CURRENT_DAY && day != 2) {
 			htmlContent = `<h1>Day ${day} is not available yet.</h1><p>Please come back on December ${day + 12} to see the content!</p>`;
 			return;
 		}
