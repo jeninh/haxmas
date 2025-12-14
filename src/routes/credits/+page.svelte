@@ -166,6 +166,9 @@
 		{/each}
 	</div>
 
+	<footer>
+		Haxmas is proudly 100% teen-organized.
+	</footer>
 
 </div>
 
@@ -184,6 +187,10 @@
 		padding-bottom: 100px;
 		overflow: scroll;
         background-color: #4285f4;
+	}
+
+	footer {
+		margin-top:3rem;
 	}
 
 	h1 {
