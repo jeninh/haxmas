@@ -114,6 +114,9 @@
 	function shop() {
 		window.location.href = '/shop';
 	}
+	function profile() {
+		window.location.href = '/profile';
+	}
 </script>
 
 <ChristmasAnimationNoPresents />
@@ -137,6 +140,7 @@
 		<Button on:click={shop}>Shop</Button>
 		<Button on:click={faq}>FAQ</Button>
 		<Button on:click={credits}>Credits</Button>
+		<Button on:click={profile}>Profile</Button>
 		<Button href="/auth/logout">Log Out</Button>
 	</div>
 </div>

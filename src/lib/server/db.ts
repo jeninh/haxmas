@@ -25,6 +25,7 @@ export interface User {
 	legal_last_name: string | null;
 	addresses: Address[];
 	role: 'user' | 'admin';
+	snowflakes: number;
 	created_at: Date;
 	updated_at: Date;
 }
